@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    padding: 20px;
+}
+
+.weather-container {
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    width: 85%;
+    padding: 12px;
+    border: none;
+    background: #eee;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-box button {
+    width: 15%;
+    border: none;
+    background: #4a90e2;
+    color: white;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.search-box button:hover {
+    background: #357abd;
+}
+
+.weather-main {
+    margin-bottom: 30px;
+}
+
+.city {
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+}
+
+.date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.current-temp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.current-temp .icon {
+    font-size: 60px;
+}
+
+.current-temp .temp {
+    font-size: 60px;
+    font-weight: bold;
+    color: #4a90e2;
+}
+
+.condition {
+    font-size: 20px;
+    color: #555;
+    font-weight: 500;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.detail-card {
+    background: #f4f8ff;
+    padding: 15px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.detail-label {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.detail-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.forecast-section h3 {
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #444;
+}
+
+.forecast-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecast-card {
+    background: #4a90e2;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 18%;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
+}
+
+.f-day {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.f-icon {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.f-temp {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+@media (max-width: 400px) {
+    .weather-container {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .current-temp .temp, .current-temp .icon {
+        font-size: 45px;
+    }
+}
