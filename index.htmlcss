@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast - Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="weather-container">
+        
+        <div class="search-box">
+            <input type="text" placeholder="Enter City Name...">
+            <button class="search-btn">🔍</button>
+        </div>
+
+        <div class="weather-main">
+            <h2 class="city">New York, US</h2>
+            <p class="date">Tuesday, 10 Oct 2025</p>
+            
+            <div class="current-temp">
+                <span class="icon">⛅</span>
+                <span class="temp">24°C</span>
+            </div>
+            <p class="condition">Partly Cloudy</p>
+        </div>
+
+        <div class="weather-details">
+            <div class="detail-card">
+                <span class="detail-label">Humidity</span>
+                <span class="detail-value">65%</span>
+            </div>
+            <div class="detail-card">
+                <span class="detail-label">Wind Speed</span>
+                <span class="detail-value">12 km/h</span>
+            </div>
+            <div class="detail-card">
+                <span class="detail-label">Pressure</span>
+                <span class="detail-value">1014 hPa</span>
+            </div>
+        </div>
+
+        <div class="forecast-section">
+            <h3>5-Day Forecast</h3>
+            <div class="forecast-grid">
+                <div class="forecast-card">
+                    <p class="f-day">Wed</p>
+                    <p class="f-icon">☀️</p>
+                    <p class="f-temp">26°C</p>
+                </div>
+                <div class="forecast-card">
+                    <p class="f-day">Thu</p>
+                    <p class="f-icon">🌧</p>
+                    <p class="f-temp">20°C</p>
+                </div>
+                <div class="forecast-card">
+                    <p class="f-day">Fri</p>
+                    <p class="f-icon">⛈</p>
+                    <p class="f-temp">18°C</p>
+                </div>
+                <div class="forecast-card">
+                    <p class="f-day">Sat</p>
+                    <p class="f-icon">☁️</p>
+                    <p class="f-temp">22°C</p>
+                </div>
+                <div class="forecast-card">
+                    <p class="f-day">Sun</p>
+                    <p class="f-icon">☀️</p>
+                    <p class="f-temp">25°C</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
