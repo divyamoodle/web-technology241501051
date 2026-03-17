@@ -1,0 +1,75 @@
+expt login code:
+
+package com.test;
+
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+@WebServlet("/LoginServlet")
+public class LoginServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+            throws ServletException, IOException {
+        
+ 
+        String u = request.getParameter("user");
+        String p = request.getParameter("pass");
+        
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+  
+        if(u.equals("admin") && p.equals("123")) {
+         
+            HttpSession session = request.getSession();
+            session.setAttribute("myUser", u);
+            
+           
+            out.println("<h3>Login Successful!</h3>");
+            out.println("Welcome, " + session.getAttribute("myUser"));
+            out.println("<br><a href='LogoutServlet'>Click here to Logout</a>");
+        } else {
+            out.println("<h3 style='color:red'>Invalid Login!</h3>");
+            out.println("<a href='index.html'>Try Again</a>");
+        }
+    }
+}
+
+Expt logoutcode:
+
+package com.test;
+
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+@WebServlet("/LoginServlet")
+public class LoginServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+            throws ServletException, IOException {
+        
+ 
+        String u = request.getParameter("user");
+        String p = request.getParameter("pass");
+        
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+  
+        if(u.equals("admin") && p.equals("123")) {
+         
+            HttpSession session = request.getSession();
+            session.setAttribute("myUser", u);
+            
+           
+            out.println("<h3>Login Successful!</h3>");
+            out.println("Welcome, " + session.getAttribute("myUser"));
+            out.println("<br><a href='LogoutServlet'>Click here to Logout</a>");
+        } else {
+            out.println("<h3 style='color:red'>Invalid Login!</h3>");
+            out.println("<a href='index.html'>Try Again</a>");
+        }
+    }
+}
